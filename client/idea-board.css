@@ -1,0 +1,113 @@
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: blue
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+div.container {
+    width: 990px;
+    margin: 0 auto;
+}
+
+div.ideas {
+    width: 100%;
+    margin: 10px 0px 20px 0px;
+    overflow: auto;
+}
+
+div.column {
+    width: 33%;
+    margin-right: 0.5%;
+    float: left;
+    min-height: 200px;
+}
+
+div.column:last-child {
+    margin-right: 0px;
+}
+
+div.idea {
+    position:relative;
+    height: 200px;
+    min-height: 200px;
+    border: 1px solid black;
+    margin: 5px 0px 5px 0px;
+    padding: 5px 10px 5px 10px;
+    text-align: left;
+}
+
+.column .idea h2 {
+    margin: 0;
+    text-decoration: bold;
+    text-align: center;
+    border-bottom:1px solid #eee;
+    cursor: move;
+}
+
+.column .placeholder {
+    background: #f0f0f0;
+    border: 1px dashed #ddd;
+    height: 210px;
+    min-height: 210px;
+}
+
+div.new-idea {
+    width: 100%;
+    text-align: right;
+    text-decoration: strong;
+    line-height: 28px;
+}
+
+span.new-idea {
+    padding: 0px 5px 0px 5px;
+}
+
+div.new-idea:hover {
+    font-size: 22px;
+}
+
+div.new-idea:hover a span.new-idea {
+    border: 1px dashed gray;
+}
+
+div.new-idea:hover a span.new-idea:after {
+  content: ' New Idea';
+}
+
+div.new-idea a {
+    text-decoration: none;
+}
+
+div.edit {
+    width: 100%;
+    margin-bottom:5px;
+}
+
+div.edit-left-link {
+    width: 50%;
+    text-align: left;
+    font-size: 10px;
+    float: left;
+}
+
+div.edit-save {
+    width: 50%;
+    text-align: right;
+    float: left;
+    margin-bottom: 5px;
+}
+
+div.idea textarea {
+    font-size:16px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 75%;
+}

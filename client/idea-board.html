@@ -1,0 +1,45 @@
+<head>
+  <title>Idea Board</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ideas">
+            {{> ideas}}
+        </div>
+    </div>
+</body>
+
+<template name="ideas">
+    <div class="new-idea"><a href="#" id="new-idea"><span class="new-idea"><i class="ion-ios-plus-outline"></i></span></a></div>
+    <div class="column" id="column1">
+        {{#each ideas 1}}
+            {{> idea this}}
+        {{/each}}
+    </div>
+    <div class="column" id="column2">
+        {{#each ideas 2}}
+            {{> idea this}}
+        {{/each}}
+    </div>
+    <div class="column" id="column3">
+        {{#each ideas 3}}
+            {{> idea this}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="idea">
+    <div class="idea" id="{{this._id}}.div">
+        {{#if editIdea this._id}}
+            <div class="edit-left-link"><a href="#" class="edit-cancel" id="{{this._id}}.cancel">Cancel</a></div>
+            <div class="edit-save"><button class="edit-save" id="{{this._id}}.save">Save</button></div>
+            <textarea id="{{this._id}}.text">{{this.title}}
+{{this.text}}</textarea>
+            <div class="edit-left-link"><a href="#" class="edit-remove" id="{{this._id}}.remove">Remove</a></div>
+        {{else}}
+            <h2>{{this.title}}</h2>
+            {{{this.text}}}
+        {{/if}}
+    </div>
+</template>
